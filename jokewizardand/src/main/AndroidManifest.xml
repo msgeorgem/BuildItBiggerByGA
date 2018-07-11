@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jokewizardand">
+
+    <application>
+        <activity
+            android:name=".DisplayJokeActivity"
+            android:label="@string/title_activity_display_joke">
+            <intent-filter>
+                <action android:name=".DisplayJokeActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+
+</manifest>
