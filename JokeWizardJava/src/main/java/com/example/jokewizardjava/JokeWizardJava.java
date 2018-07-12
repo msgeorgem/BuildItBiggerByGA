@@ -6,6 +6,6 @@ public class JokeWizardJava {
     }
 
     public String tellAHandCraftedJoke(){
-        return "Why is it so hard for a leopard to hide? Because he’s always spotted.";
+        return "Why is it so hard for a leopard to hide? \n Because he is always spotted.";
     }
 }

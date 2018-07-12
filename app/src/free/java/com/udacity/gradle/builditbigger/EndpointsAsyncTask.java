@@ -3,7 +3,6 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-
 import android.util.Pair;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -15,8 +14,6 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
-import com.udacity.gradle.builditbigger.backend.myApi.model.MyBean;
-
 
 import java.io.IOException;
 
@@ -65,7 +62,7 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         mResult = result;
-
+        mResult = "There are better jokes in paid version";
         mInterstitialAd = new InterstitialAd(mContext);
         mInterstitialAd.setAdUnitId(mContext.getString(R.string.interstitial_ad_unit_id));
         mInterstitialAd.setAdListener(new AdListener() {
