@@ -62,7 +62,7 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         mResult = result;
-        mResult = "There are better jokes in paid version";
+        mResult = mContext.getString(R.string.not_funny_joke);
         mInterstitialAd = new InterstitialAd(mContext);
         mInterstitialAd.setAdUnitId(mContext.getString(R.string.interstitial_ad_unit_id));
         mInterstitialAd.setAdListener(new AdListener() {
