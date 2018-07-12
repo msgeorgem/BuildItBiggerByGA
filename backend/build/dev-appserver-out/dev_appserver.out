@@ -1,23 +1,31 @@
 Warning: Google App Engine Java 7 runtime is deprecated.
 Warning: See https://cloud.google.com/appengine/docs/deprecations/java7
-lip 12, 2018 8:22:30 PM java.util.prefs.WindowsPreferences <init>
+lip 13, 2018 12:17:09 AM java.util.prefs.WindowsPreferences <init>
 WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
-lip 12, 2018 8:22:31 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+lip 13, 2018 12:17:09 AM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Program Files (x86)\Google\CloudSDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'F:\MEGA\AndroidDevAdvanced\BuildItBiggerByGA\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-lip 12, 2018 8:22:31 PM com.google.apphosting.utils.jetty.JettyLogger info
+lip 13, 2018 12:17:09 AM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
-lip 12, 2018 6:22:31 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+lip 12, 2018 10:17:09 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 WARNING: Your working directory, (F:\MEGA\AndroidDevAdvanced\BuildItBiggerByGA) is not equal to your 
 web application root (F:\MEGA\AndroidDevAdvanced\BuildItBiggerByGA\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-lip 12, 2018 6:22:31 PM com.google.apphosting.utils.jetty.JettyLogger info
+lip 12, 2018 10:17:09 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: jetty-6.1.x
-lip 12, 2018 6:22:33 PM com.google.apphosting.utils.jetty.JettyLogger info
+lip 12, 2018 10:17:09 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: Started SelectChannelConnector@localhost:8080
-lip 12, 2018 6:22:33 PM com.google.appengine.tools.development.AbstractModule startup
+lip 12, 2018 10:17:09 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-lip 12, 2018 6:22:33 PM com.google.appengine.tools.development.AbstractModule startup
+lip 12, 2018 10:17:09 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-lip 12, 2018 8:22:33 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+lip 13, 2018 12:17:09 AM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
+lip 13, 2018 12:17:21 AM com.google.appengine.repackaged.com.google.protobuf.UnsafeUtil supportsUnsafeByteBufferOperations
+WARNING: platform method missing - proto runtime falling back to safer methods: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessClassInPackage.sun.misc")
+lip 13, 2018 12:17:21 AM com.google.appengine.repackaged.com.google.protobuf.UnsafeUtil supportsUnsafeArrayOperations
+WARNING: platform method missing - proto runtime falling back to safer methods: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessClassInPackage.sun.misc")
+lip 13, 2018 12:17:22 AM com.google.appengine.tools.development.LocalResourceFileServlet doGet
+WARNING: No file found for: /favicon.ico
+lip 13, 2018 12:17:22 AM com.google.appengine.tools.development.LocalResourceFileServlet doGet
+WARNING: No file found for: /favicon.ico
