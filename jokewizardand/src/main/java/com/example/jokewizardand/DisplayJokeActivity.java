@@ -1,5 +1,6 @@
 package com.example.jokewizardand;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -9,16 +10,22 @@ import android.widget.TextView;
 
 public class DisplayJokeActivity extends AppCompatActivity {
 
-    public final static String JOKE = "JOKE";
+    public final static String JOKE_KEY = "JOKE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_joke);
 
-        String joke = getIntent().getStringExtra(JOKE);
-        TextView textViewJoke = (TextView) findViewById(R.id.textview_joke);
-        textViewJoke.setText(joke);
+        Intent intent = getIntent();
+        if (intent.hasExtra(JOKE_KEY)) {
+            String joke = intent.getStringExtra(JOKE_KEY);
+            TextView textViewJoke = findViewById(R.id.textview_joke);
+            textViewJoke.setText(joke);
+        } else {
+            TextView textViewJoke = findViewById(R.id.textview_joke);
+            textViewJoke.setText(R.string.no_joke_passed);
+        }
     }
 
     @Override

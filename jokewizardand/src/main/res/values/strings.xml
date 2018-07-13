@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JokeWizardAnd</string>
     <string name="title_activity_display_joke">DisplayJoke</string>
+    <string name="no_joke_passed">No Joke passed</string>
 </resources>

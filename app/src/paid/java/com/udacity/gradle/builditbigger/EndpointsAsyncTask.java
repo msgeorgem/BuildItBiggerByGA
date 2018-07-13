@@ -3,20 +3,14 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-
 import android.util.Pair;
 import android.view.View;
 import android.widget.ProgressBar;
 
 import com.example.jokewizardand.DisplayJokeActivity;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
-import com.udacity.gradle.builditbigger.backend.myApi.model.MyBean;
-
 
 import java.io.IOException;
 
@@ -27,7 +21,6 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
     private static MyApi mMyApi = null;
     private Context mContext;
     private String mResult;
-    private InterstitialAd mInterstitialAd;
     private ProgressBar mProgressBar;
 
     public EndpointsAsyncTask(Context context, ProgressBar progressBar) {
@@ -73,7 +66,7 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
 
     private void startJokeDisplayActivity() {
         Intent intent = new Intent(mContext, DisplayJokeActivity.class);
-        intent.putExtra(DisplayJokeActivity.JOKE, mResult);
+        intent.putExtra(DisplayJokeActivity.JOKE_KEY, mResult);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(intent);
     }
