@@ -3,6 +3,7 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -54,7 +55,8 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
         try {
             return mMyApi.getJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            Log.i("Error Retrieving Jokes", e.getMessage());
+            return null;
         }
     }
 
